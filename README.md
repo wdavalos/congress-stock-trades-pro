@@ -4,6 +4,9 @@ Every STOCK Act Periodic Transaction Report (PTR) filed with the **US House Cler
 
 No proxy. No API key. Reads the Clerk's public filing index directly - the primary source, not a repackaged dataset.
 
+**Run it on the Apify Store:** https://apify.com/red.cars/congress-stock-trades-pro
+**ScraperFleet data page:** https://scraperfleet.com/actors/congress-stock-trades-pro/
+
 ## Better than the incumbents
 
 [johnvc/us-congress-financial-disclosures-and-stock-trading-data](https://apify.com/johnvc/us-congress-financial-disclosures-and-stock-trading-data) is the demand leader (38 monthly active users, 5.0 across 5 reviews, $1.63 per 1,000): strong product, but amounts stay as text ranges and no numeric midpoint. This actor reads the same official filings and adds: numeric `amountMin` / `amountMax` / `amountMidpoint` per row, office and district parsed out of the index row, per-transaction `description` (option strikes, share counts, partial-sale notes), and a hard `maxItems` cap so you never pay for rows you didn't ask for. Version 0.0 covers House PTRs; Senate eFD parsing is on the roadmap.
